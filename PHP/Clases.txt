@@ -1,0 +1,80 @@
+<?php
+
+class Usuario {
+    private $nombreUsuario;
+    private $contrasena;
+
+    public function __construct($nombreUsuario, $contrasena) {
+        $this->nombreUsuario = $nombreUsuario;
+        $this->contrasena = $contrasena;
+    }
+}
+
+class Persona {
+    protected $nombre;
+    protected $telefono;
+    protected $email;
+
+    public function __construct($nombre, $telefono, $email) {
+        $this->nombre = $nombre;
+        $this->telefono = $telefono;
+        $this->email = $email;
+    }
+}
+
+class Profesor extends Persona {
+    private $dni;
+    private $direccion;
+    private $numSegSocial;
+    private $fechaNacimiento;
+    private $titulacion;
+
+    // Constructor, getters y setters
+}
+
+class Padre extends Persona {
+    private $apellidos;
+
+    // Constructor, getters y setters
+}
+
+class Alumno extends Persona {
+    private $numeroMatricula;
+    private $direccion;
+    private $dni;
+    private $fechaNacimiento;
+
+    // Constructor, getters y setters
+}
+
+class Clase {
+    private $curso;
+    private $letra;
+    private $tutor; // Instancia de la clase Profesor
+    private $alumnos = []; // Array de instancias de la clase Alumno
+
+    // Constructor, getters y setters
+}
+
+class Tarea {
+    private $mensaje;
+    private $adjunto;
+
+    // Constructor, getters y setters
+}
+
+class Mensaje {
+    private $contenido;
+
+    // Constructor, getters y setters
+}
+
+class Timeline {
+    private $historia = []; // Array de fotos
+
+    public function agregarFoto($foto) {
+        $this->historia[] = $foto;
+    }
+}
+
+?>
